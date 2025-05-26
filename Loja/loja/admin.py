@@ -11,7 +11,7 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('Produto', 'destaque', 'promocao', 'msgPromocao',
     'preco', 'categoria',)
     empty_value_display = 'Vazio'
-    fields = ('Produto', 'destaque', 'promocao', 'msgPromocao', 'preco', 'categoria',) #exclui o fabricante e imagem
+    # fields = ('Produto', 'destaque', 'promocao', 'msgPromocao', 'preco', 'categoria',) #exclui o fabricante e imagem
     search_fields = ('Produto',) #esse pesquisa os produtos na aba de produtos
     # exclude =('msgPromocao',) #esse exclui a mensagem de promoção
 admin.site.register(Fabricante, FabricanteAdmin) #adiciona a interface do adm
