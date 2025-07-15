@@ -6,3 +6,5 @@ from django.dispatch import receiver
 from .Fabricante import Fabricante
 from .Categoria import Categoria
 from .Produto import Produto
+# inclua o modelo de usuário
+from .Usuario import Usuario
