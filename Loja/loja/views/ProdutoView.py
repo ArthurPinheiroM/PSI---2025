@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from loja.models import Produto, Fabricante, Categoria
+from django.contrib.auth.decorators import login_required
 from datetime import timedelta, datetime
 from django.utils import timezone
 # inclua as bibliotecas FileSystemStorage
@@ -37,7 +38,7 @@ def edit_produto_postback(request, id=None):
     return redirect("/produto")
 
 
-
+@login_required
 def edit_produto_view(request, id=None):
     produtos = Produto.objects.all()
     if id is not None:
