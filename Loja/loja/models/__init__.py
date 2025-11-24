@@ -8,3 +8,5 @@ from .Categoria import Categoria
 from .Produto import Produto
 # inclua o modelo de usuário
 from .Usuario import Usuario
+from .Carrinho import Carrinho
+from .Carrinho import CarrinhoItem
