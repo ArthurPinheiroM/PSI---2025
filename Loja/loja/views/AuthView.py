@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from loja.forms.AuthForm import LoginForm, RegisterForm
+from django.http import HttpResponse
 def register_view(request):
     registerForm = RegisterForm()
     message = None
@@ -59,3 +60,17 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/login')
+
+def privacy_view(request):
+    return HttpResponse(
+        "<h1>Política de Privacidade</h1>"
+        "<p>Este aplicativo utiliza login via Facebook apenas para autenticação.</p>"
+        "<p>Não armazenamos dados sensíveis.</p>"
+    )
+
+def delete_account_view(request):
+    return HttpResponse(
+        "<h1>Exclusão de Dados</h1>"
+        "<p>Para solicitar exclusão de dados, envie um email para: "
+        "<strong>arthurmedeiros0407@gmail.com</strong></p>"
+    )

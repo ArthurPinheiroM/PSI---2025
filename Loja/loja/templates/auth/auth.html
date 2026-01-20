@@ -23,8 +23,18 @@
                     {% endfor %}
                 <a href="{{link_href}}" style="display: block; text-align: center; margin-bottom:20px;">{{link_text}}</a>
                 <button type="submit" class="btn btn-primary">{{button_text}}</button>
+
+                <!-- Adicione as linhas a seguir -->
+                <p class="text-center mt-2 mb-2" style="display: block;"> 0u </p>
+                <div class="social-container">
+                    <a class="btn" id="facebook" href="{% url 'social:begin' 'facebook' %}"><i class="fa fa-facebook-f"></i></a>
+                    <a class="btn" id="google" href="#"><i class="fa fa-google"></i></a>
+                </div>
             </form>
         </div>
     </div>
 </div>
 {% endblock %}
+
+
+<p></p>
