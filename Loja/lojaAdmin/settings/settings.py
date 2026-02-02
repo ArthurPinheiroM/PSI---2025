@@ -139,9 +139,11 @@ LOGOUT_REDIRECT_URL = '/login'
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-SOCIAL_AUTH_FACEBOOK_KEY = "2087238358809172"
-SOCIAL_AUTH_FACEBOOK_SECRET = "535e7069c8853751ebfc53092d908296"
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
+SESSION_COOKIE_SAMESITE = 'Lax'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "403754873543-2htull9pejl8542jlvnjlqnegaiqgqcv.apps.googleusercontent.com"
+SOCIAL_AUTH_GOOGLE_0AUTH2_SECRET = "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"
